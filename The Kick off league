@@ -1,0 +1,81 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { CalendarDays, Gamepad2, Users2, Trophy, Image, ScrollText } from "lucide-react";
+
+export default function TheKickoffLeague() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 to-black text-white p-6">
+      <header className="text-center mb-12">
+        <h1 className="text-5xl font-bold tracking-wide mb-2">The Kickoff League</h1>
+        <p className="text-zinc-400 text-lg">O torneio definitivo para gamers competitivos!</p>
+      </header>
+
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <Card className="bg-zinc-800 border-none shadow-xl">
+          <CardContent className="p-6">
+            <Gamepad2 className="w-10 h-10 mb-4 text-blue-500" />
+            <h2 className="text-xl font-semibold mb-2">Jogos Variados</h2>
+            <p className="text-zinc-400">Participe de competições em vários jogos populares como FIFA, Call of Duty, e muito mais.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-zinc-800 border-none shadow-xl">
+          <CardContent className="p-6">
+            <Users2 className="w-10 h-10 mb-4 text-green-500" />
+            <h2 className="text-xl font-semibold mb-2">Comunidade Ativa</h2>
+            <p className="text-zinc-400">Encontre novos amigos, monte seu time e dispute com os melhores jogadores do país.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-zinc-800 border-none shadow-xl">
+          <CardContent className="p-6">
+            <CalendarDays className="w-10 h-10 mb-4 text-yellow-500" />
+            <h2 className="text-xl font-semibold mb-2">Datas e Premiações</h2>
+            <p className="text-zinc-400">Fique de olho no calendário e garanta sua vaga para concorrer a prêmios incríveis!</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="max-w-xl mx-auto bg-zinc-800 p-8 rounded-2xl shadow-lg mb-16">
+        <h3 className="text-2xl font-bold mb-4">Inscreva-se agora</h3>
+        <form className="flex flex-col gap-4">
+          <Input type="text" placeholder="Nome do jogador ou time" className="bg-zinc-700 border-none text-white" />
+          <Input type="email" placeholder="Email para contato" className="bg-zinc-700 border-none text-white" />
+          <Button type="submit" className="bg-blue-600 hover:bg-blue-700">Enviar inscrição</Button>
+        </form>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <Card className="bg-zinc-800 border-none shadow-xl">
+          <CardContent className="p-6">
+            <Trophy className="w-10 h-10 mb-4 text-orange-500" />
+            <h2 className="text-xl font-semibold mb-2">Ranking de Jogadores</h2>
+            <p className="text-zinc-400">Confira os melhores colocados do torneio e acompanhe sua pontuação em tempo real.</p>
+          </CardContent>
+        </Card>
+    
+        <Card className="bg-zinc-800 border-none shadow-xl">
+          <CardContent className="p-6">
+            <Image className="w-10 h-10 mb-4 text-purple-500" />
+            <h2 className="text-xl font-semibold mb-2">Galeria de Fotos</h2>
+            <p className="text-zinc-400">Reviva os melhores momentos dos torneios anteriores com nossa galeria interativa.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-zinc-800 border-none shadow-xl">
+          <CardContent className="p-6">
+            <ScrollText className="w-10 h-10 mb-4 text-red-500" />
+            <h2 className="text-xl font-semibold mb-2">Regras do Torneio</h2>
+            <p className="text-zinc-400">Leia atentamente as regras para garantir uma competição justa e organizada para todos.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <footer className="text-center text-zinc-500 text-sm mt-16">
+        © {new Date().getFullYear()} The Kickoff League. Todos os direitos reservados.
+      </footer>
+    </div>
+  );
+}  
